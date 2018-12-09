@@ -1,0 +1,3489 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20183.18.1128.2033                               -->
+<workbook source-build='2018.3.1 (20183.18.1128.2033)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource inline='true' name='Clipboard_20181207T144804' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Clipboard_20181207T144804' name='Clipboard_20181207T144804leaf'>
+            <connection class='textscan' directory='/Users/troybailey/Documents/My Tableau Repository/Datasources/Clipboard_20181207T144804' />
+          </named-connection>
+        </named-connections>
+        <relation connection='Clipboard_20181207T144804leaf' name='Clipboard_20181207T144804#txt' table='[Clipboard_20181207T144804#txt]' type='table' />
+      </connection>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500585' measure-ordering='alphabetic' measure-percentage='0.499415' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='201601-citibike-tripdata' inline='true' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='201601-citibike-tripdata' name='textscan.0tjvt8g1343wtk1e3n5bs026uqbb'>
+            <connection class='textscan' directory='/Users/troybailey/Data Science/Repos/citiBike data/Unzipped/New Folder With Items/monthly/2016' filename='201601-citibike-tripdata.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation all='true' connection='textscan.0tjvt8g1343wtk1e3n5bs026uqbb' include-siblings='true' is-recursive='false' name='Union' path='' type='batch-union'>
+          <database-filter />
+          <table-filter />
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='tripduration' />
+            <column datatype='datetime' name='starttime' />
+            <column datatype='datetime' name='stoptime' />
+            <column datatype='integer' name='start station id' />
+            <column datatype='string' name='start station name' />
+            <column datatype='real' name='start station latitude' />
+            <column datatype='real' name='start station longitude' />
+            <column datatype='integer' name='end station id' />
+            <column datatype='string' name='end station name' />
+            <column datatype='real' name='end station latitude' />
+            <column datatype='real' name='end station longitude' />
+            <column datatype='integer' name='bikeid' />
+            <column datatype='string' name='usertype' />
+            <column datatype='string' name='birth year' />
+            <column datatype='integer' name='gender' />
+            <column datatype='string' name='Path' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Union]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tripduration</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tripduration]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>tripduration</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>starttime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[starttime]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>starttime</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>stoptime</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[stoptime]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>stoptime</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[start station id]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>start station id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[start station name]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>start station name</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station latitude]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>start station latitude</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[start station longitude]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>start station longitude</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[end station id]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>end station id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[end station name]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>end station name</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station latitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station latitude]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>end station latitude</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>end station longitude</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[end station longitude]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>end station longitude</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>bikeid</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[bikeid]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>bikeid</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usertype</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usertype]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>usertype</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>birth year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[birth year]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>birth year</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Path</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Path]</local-name>
+            <parent-name>[Union]</parent-name>
+            <remote-alias>Path</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='GenderName' datatype='string' name='[Calculation_352406673415184385]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [gender] = 1 THEN &quot;Male&quot;&#10;ELSEIF  [gender] = 2 THEN &quot;Female&quot;&#10;ELSE &quot;Not-Specified&quot;&#10;END' />
+      </column>
+      <column caption='Age (years)' datatype='integer' name='[Calculation_352406673416994819]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='2018-INT([birth year])' />
+      </column>
+      <column caption='Duration (hours)' datatype='real' name='[Calculation_352406673417240580]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([stoptime]-[starttime])/3600' />
+      </column>
+      <column caption='Roundtrip' datatype='integer' name='[Calculation_352406674176126984]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IF [end station name]=[start station name] THEN 1 ELSE 0 END' />
+      </column>
+      <column caption='bikesFirstRide' datatype='datetime' name='[Calculation_352406674183528457]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{FIXED [bikeid] : MIN([starttime])}' />
+      </column>
+      <column caption='Service Duration' datatype='real' name='[Calculation_352406674188976138]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='([bikesFirstRide (copy)]-[Calculation_352406674183528457])/365' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='bikeid (group) (1)' datatype='string' name='[bikeid (group) 1]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[bikeid]' new-bin='true' />
+      </column>
+      <column datatype='string' name='[bikeid (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[bikeid]' new-bin='true' />
+      </column>
+      <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+      <column caption='stationFirstRide' datatype='datetime' name='[bikesFirstRide (copy 2)]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{FIXED [start station name] : MIN([starttime])}' />
+      </column>
+      <column caption='bikesLastRide' datatype='datetime' name='[bikesFirstRide (copy)]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='{FIXED [bikeid] : Max([starttime])}' />
+      </column>
+      <column aggregation='Avg' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+      <column aggregation='Avg' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+      <column datatype='string' name='[start station name (group)]' role='dimension' type='nominal'>
+        <calculation class='categorical-bin' column='[start station name]' new-bin='true' />
+      </column>
+      <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+      <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+      <column caption='stationAge' datatype='real' name='[stationFirstRide (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='{FIXED [start station name] : TODAY()-MIN([starttime])}' />
+      </column>
+      <column aggregation='CountD' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+      <column-instance column='[starttime]' derivation='Attribute' name='[attr:starttime:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[starttime]' derivation='Min' name='[min:starttime:ok]' pivot='key' type='ordinal' />
+      <column-instance column='[Calculation_352406673415184385]' derivation='None' name='[none:Calculation_352406673415184385:nk]' pivot='key' type='nominal' />
+      <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+      <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.487273' measure-ordering='alphabetic' measure-percentage='0.512727' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[yr:starttime:ok]' palette='tableau-10' type='palette'>
+            <map to='#17becf'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2017</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:usertype:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Subscriber&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Customer&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[hr:starttime:ok]' palette='tableau-10' type='palette'>
+            <map to='#17becf'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2017</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_352406673415184385:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Not-Specified&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Non-Binary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:starttime:ok]' palette='tableau-10' type='palette' />
+          <encoding attr='color' field='[min:starttime:ok]' palette='tableau-10' type='palette' />
+          <encoding attr='color' field='[yr:starttime:ok]' palette='tableau-10' type='palette'>
+            <map to='#17becf'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2017</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:usertype:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Subscriber&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Customer&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[hr:starttime:ok]' palette='tableau-10' type='palette'>
+            <map to='#17becf'>
+              <bucket>2018</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2013</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2014</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2015</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2016</bucket>
+            </map>
+            <map to='#1f77b4'>
+              <bucket>2017</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Calculation_352406673415184385:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Male&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Not-Specified&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Non-Binary&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Female&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[attr:starttime:ok]' palette='tableau-10' type='palette' />
+          <encoding attr='color' field='[min:starttime:ok]' palette='tableau-10' type='palette' />
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Age/Duration'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Ride Duration by Rider Age</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='Age (years)' datatype='integer' name='[Calculation_352406673416994819]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='2018-INT([birth year])' />
+            </column>
+            <column caption='Duration (hours)' datatype='real' name='[Calculation_352406673417240580]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([stoptime]-[starttime])/3600' />
+            </column>
+            <column datatype='string' name='[birth year]' role='dimension' type='nominal' />
+            <column-instance column='[Calculation_352406673416994819]' derivation='None' name='[none:Calculation_352406673416994819:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_352406673417240580]' derivation='Sum' name='[sum:Calculation_352406673417240580:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:Calculation_352406673417240580:qk]' included-values='in-range'>
+            <min>0.083000000000000004</min>
+            <max>11.0</max>
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:Calculation_352406673417240580:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='5' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:Calculation_352406673417240580:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673416994819:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Bottom10EndsMap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom Top 10 End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[stoptime]' derivation='Count' name='[cnt:stoptime:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column-instance column='[end station latitude]' derivation='None' name='[none:end station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude]' derivation='None' name='[none:end station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+            <column-instance column='[stoptime]' derivation='Year' name='[yr:stoptime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' included-values='in-range'>
+            <min>100</min>
+            <max>1125</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;11 St &amp; 35 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;11 St &amp; 43 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;21 St &amp; 36 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;21 St &amp; 38 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;27 Ave &amp; 4 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;28 Ave &amp; 44 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;28 St &amp; 40 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;34 Ave &amp; 13 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;40 Ave &amp; 9 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;40 Ave &amp; Crescent St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;47 Ave &amp; Skillman Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;48 Ave &amp; 30 Pl&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;5 St &amp; Market St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;8 Ave &amp; W 16 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;8D Mobile 01&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;8D OPS 01&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;8D QC Station 01&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Albany Ave &amp; Fulton St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Apache&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Bike Mechanics at Riis Room A&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Bike Mechanics at Riis Room B&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Bressler&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Carroll St &amp; Franklin Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Central Park West &amp; W 100 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;City Hall&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Columbia St &amp; Lorraine St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Columbia St &amp; W 9 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Columbus Drive&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Communipaw &amp; Berry Lane&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Crown St &amp; Bedford Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Division Av &amp; Hooper St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Dixon Mills&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Driggs Ave &amp; N 9 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 118 St &amp; Park Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 3 St &amp; 1 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 80 St &amp; 2 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 87 St &amp; 3 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 95 St &amp; 3 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 98 St &amp; Lexington Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Essex Light Rail&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Exchange Place&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Fairmount Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;GOW Tech Shop&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Grand St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Grove St PATH&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Hamilton Park&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Handlebar @ Gowanus&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Harborside&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Heights Elevator&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Henry St &amp; W 9 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Henry St &amp; W 9 St [old]&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Jersey &amp; 6th St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Lafayette Park&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Liberty Light Rail&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Marin Light Rail&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Montgomery St &amp; Franklin Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Montgomery St &amp; Franklin Ave OLD&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Morris Canal&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Newport PATH&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Newport Pkwy&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Paulus Hook&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Prospect Park - 5 Year Anniversary Celebration&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Prototype Lab Motivate Headquarters&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Railroad Ave &amp; Kay Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Riverview Park&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Sip Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Smart Cities Conference&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Sullivan Pl &amp; Bedford Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Union St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Van Dyke St &amp; Van Brunt St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Van Vorst Park&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;W 13 St &amp; 5 Ave -moved to 5947.04&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;W 35 St &amp; Dyer Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Warren St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Washington St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;York St&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]'>
+            <groupfilter function='member' level='[yr:stoptime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]' field-type='quantitative' max='-8200695.4059908073' min='-8244626.5822473411' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]' field-type='quantitative' max='4985174.6900951322' min='4957367.7038052827' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' field-type='quantitative' max-size='1' min-size='0.386719' type='quantsize' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='true' />
+            <format attr='enabled' id='ziplabels' value='true' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' />
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.0734797716140747' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1124</value>
+                <value>40.774717500000001</value>
+                <value>-73.933789399999995</value>
+                <value>&quot;27 Ave &amp; 4 St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>992</value>
+                <value>40.718169694542077</value>
+                <value>-73.955201357603073</value>
+                <value>&quot;Driggs Ave &amp; N 9 St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='Bottom10StartsMap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom 10 Start Stations&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' included-values='in-range'>
+            <min>100</min>
+            <max>1100</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;40 Ave &amp; Crescent St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;47 Ave &amp; Skillman Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;8D Mobile 01&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;8D OPS 01&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;8D QC Station 01&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Apache&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Bressler&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Columbia St &amp; Lorraine St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Division Av &amp; Hooper St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 3 St &amp; 1 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 80 St &amp; 2 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 98 St &amp; Lexington Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;GOW Tech Shop&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Handlebar @ Gowanus&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Henry St &amp; W 9 St [old]&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Montgomery St &amp; Franklin Ave OLD&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;NYCBS Depot BAL - DYR&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Prospect Park - 5 Year Anniversary Celebration&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Prototype Lab Motivate Headquarters&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Smart Cities Conference&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]' field-type='quantitative' max='-8200817.7429503519' min='-8244748.9192068856' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]' field-type='quantitative' max='4985185.7432566434' min='4957378.7569667939' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' field-type='quantitative' max='1200' max-size='1' min='100' min-size='0.274739' type='quantsize' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='true' />
+            <format attr='enabled' id='ziplabels' value='true' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.3266892433166504' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>791</value>
+                <value>40.674705500000002</value>
+                <value>-74.007557199999994</value>
+                <value>&quot;Columbia St &amp; Lorraine St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>163</value>
+                <value>40.6763744</value>
+                <value>-74.003249569999994</value>
+                <value>&quot;Henry St &amp; W 9 St [old]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='BottomEnds'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom 10 End Stations in 2018</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[end station name]' derivation='Count' name='[cnt:end station name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='Count' name='[cnt:start station name:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' included-values='in-range'>
+            <min>100</min>
+            <max>1125</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;11 St &amp; 35 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;11 St &amp; 43 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;27 Ave &amp; 4 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;47 Ave &amp; Skillman Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Bressler&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Division Av &amp; Hooper St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Driggs Ave &amp; N 9 St&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 80 St &amp; 2 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 95 St &amp; 3 Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;E 98 St &amp; Lexington Ave&quot;' />
+              <groupfilter function='member' level='[none:end station name:nk]' member='&quot;Henry St &amp; W 9 St [old]&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <rows>
+            <shelf-sort direction='DESC' measure-to-sort-by='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]'>
+              <dimensions-to-sort>
+                <dimension>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</dimension>
+              </dimensions-to-sort>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' member-value='2018' />
+              </sort-filter-info>
+            </shelf-sort>
+          </rows>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='BottomStarts'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bottom 10 Start Stations in 2018</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[start station name]' derivation='Count' name='[cnt:start station name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' included-values='in-range'>
+            <min>100</min>
+            <max>1100</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;1 Ave &amp; E 110 St&quot;' />
+              <groupfilter from='&quot;1 Ave &amp; E 16 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;1 Pl &amp; Clinton St&quot;' />
+              <groupfilter from='&quot;10 Hudson Yards&quot;' function='range' level='[none:start station name:nk]' to='&quot;19 St &amp; 24 Ave&quot;' />
+              <groupfilter from='&quot;2 Ave &amp; 36 St - Citi Bike HQ at Industry City&quot;' function='range' level='[none:start station name:nk]' to='&quot;2 Ave &amp; E 104 St&quot;' />
+              <groupfilter from='&quot;2 Ave &amp; E 122 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;2 Ave &amp; E 55 St&quot;' />
+              <groupfilter from='&quot;2 Ave &amp; E 96 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;21 St &amp; 38 Ave&quot;' />
+              <groupfilter from='&quot;21 St &amp; 43 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;32 St &amp; 30 Ave&quot;' />
+              <groupfilter from='&quot;34 Ave &amp; 13 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;39 St &amp; 2 Ave - Citi Bike HQ at Industry City&quot;' />
+              <groupfilter from='&quot;4 Ave &amp; 2 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;6 Ave &amp; 9 St&quot;' />
+              <groupfilter from='&quot;6 Ave &amp; Canal St&quot;' function='range' level='[none:start station name:nk]' to='&quot;6 St &amp; 7 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;7 St &amp; 3 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;7 St &amp; 5 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;8 Ave &amp; W 31 St&quot;' />
+              <groupfilter from='&quot;8 Ave &amp; W 33 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;8D QC Station 01&quot;' />
+              <groupfilter from='&quot;9 Ave &amp; W 22 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Adelphi St &amp; Myrtle Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Albany Ave &amp; Fulton St&quot;' />
+              <groupfilter from='&quot;Allen St &amp; Hester St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Apache&quot;' />
+              <groupfilter from='&quot;Astoria Park S &amp; Shore Blvd&quot;' function='range' level='[none:start station name:nk]' to='&quot;Bedford Ave &amp; S 9 St&quot;' />
+              <groupfilter from='&quot;Bergen St &amp; Flatbush Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Bialystoker Pl &amp; Delancey St&quot;' />
+              <groupfilter from='&quot;Boerum St &amp; Broadway&quot;' function='range' level='[none:start station name:nk]' to='&quot;Bond St &amp; Fulton St&quot;' />
+              <groupfilter from='&quot;Bressler&quot;' function='range' level='[none:start station name:nk]' to='&quot;Broadway &amp; W 122 St&quot;' />
+              <groupfilter from='&quot;Broadway &amp; W 25 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Broadway &amp; W 38 St&quot;' />
+              <groupfilter from='&quot;Broadway &amp; W 41 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Broadway &amp; W 53 St&quot;' />
+              <groupfilter from='&quot;Broadway &amp; W 56 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Cadman Plaza E &amp; Tillary St&quot;' />
+              <groupfilter from='&quot;Cadman Plaza West &amp; Montague St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Center Blvd &amp; Borden Ave&quot;' />
+              <groupfilter from='&quot;Central Park North &amp; Adam Clayton Powell Blvd&quot;' function='range' level='[none:start station name:nk]' to='&quot;Christopher St &amp; Greenwich St&quot;' />
+              <groupfilter from='&quot;Clark St &amp; Henry St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Congress St &amp; Clinton St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Cooper Square &amp; Astor Pl&quot;' />
+              <groupfilter from='&quot;Court St &amp; Nelson St&quot;' function='range' level='[none:start station name:nk]' to='&quot;DeKalb Ave &amp; Vanderbilt Ave&quot;' />
+              <groupfilter from='&quot;Devoe St &amp; Lorimer St&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 13 St &amp; Avenue A&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 15 St &amp; 3 Ave&quot;' />
+              <groupfilter from='&quot;E 16 St &amp; 5 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 2 St &amp; 2 Ave&quot;' />
+              <groupfilter from='&quot;E 2 St &amp; Avenue A&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 35 St &amp; 3 Ave&quot;' />
+              <groupfilter from='&quot;E 39 St &amp; 2 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 4 St &amp; 2 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 41 St &amp; 5 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 41 St &amp; Madison Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 43 St &amp; 5 Ave&quot;' />
+              <groupfilter from='&quot;E 44 St &amp; 2 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 48 St &amp; 5 Ave&quot;' />
+              <groupfilter from='&quot;E 5 St &amp; 2 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 53 St &amp; 3 Ave&quot;' />
+              <groupfilter from='&quot;E 53 St &amp; Madison Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 55 St &amp; Lexington Ave&quot;' />
+              <groupfilter from='&quot;E 58 St &amp; 1 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 59 St &amp; Madison Ave&quot;' />
+              <groupfilter from='&quot;E 6 St &amp; Avenue B&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 60 St &amp; York Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 65 St &amp; 2 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;E 66 St &amp; Madison Ave&quot;' />
+              <groupfilter from='&quot;E 67 St &amp; Park Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 77 St &amp; 3 Ave&quot;' />
+              <groupfilter from='&quot;E 78 St &amp; 2 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 81 St &amp; York Ave&quot;' />
+              <groupfilter from='&quot;E 82 St &amp; East End Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;E 98 St &amp; Park Ave&quot;' />
+              <groupfilter from='&quot;East End Ave &amp; E 86 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Eckford St &amp; Engert Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Emerson Pl &amp; Myrtle Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;FDR Drive &amp; E 35 St&quot;' />
+              <groupfilter from='&quot;Flushing Ave &amp; Vanderbilt Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Fulton St &amp; Utica Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Fulton St &amp; Waverly Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Fulton St &amp; William St&quot;' />
+              <groupfilter from='&quot;Gansevoort St &amp; Hudson St&quot;' function='range' level='[none:start station name:nk]' to='&quot;GOW Tech Shop&quot;' />
+              <groupfilter from='&quot;Graham Ave &amp; Conselyea St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Greenwich Ave &amp; Charles St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Greenwich St &amp; W Houston St&quot;' />
+              <groupfilter from='&quot;Halsey St &amp; Tompkins Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Handlebar @ Gowanus&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Hanson Pl &amp; Ashland Pl&quot;' />
+              <groupfilter from='&quot;Harrison St &amp; Hudson St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Hoyt St &amp; Warren St&quot;' />
+              <groupfilter from='&quot;Hudson St &amp; Reade St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Huron St &amp; Franklin St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;India St &amp; Manhattan Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;India St &amp; West St&quot;' />
+              <groupfilter from='&quot;Jackson Ave &amp; 46 Rd&quot;' function='range' level='[none:start station name:nk]' to='&quot;Johnson St &amp; Gold St&quot;' />
+              <groupfilter from='&quot;Kane St &amp; Clinton St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Kent Ave &amp; S 11 St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Kingston Ave &amp; Herkimer St&quot;' />
+              <groupfilter from='&quot;Kosciuszko St &amp; Nostrand Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Lafayette St &amp; Jersey St&quot;' />
+              <groupfilter from='&quot;LaGuardia Pl &amp; W 3 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Lenox Ave &amp; W 130 St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Leonard St &amp; Boerum St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Leonard St &amp; Church St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Leonard St &amp; Maujer St&quot;' />
+              <groupfilter from='&quot;Leonard St &amp; Nassau Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Lexington Ave &amp; E 24 St&quot;' />
+              <groupfilter from='&quot;Lexington Ave &amp; E 29 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Lorimer St &amp; Broadway&quot;' />
+              <groupfilter from='&quot;MacDougal St &amp; Prince St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Marcy Ave &amp; Lafayette Ave&quot;' />
+              <groupfilter from='&quot;Market St &amp; Cherry St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Mercer St &amp; Bleecker St&quot;' />
+              <groupfilter from='&quot;Mercer St &amp; Spring St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Milton St &amp; Franklin St&quot;' />
+              <groupfilter from='&quot;Monroe St &amp; Bedford Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Monroe St &amp; Tompkins Ave&quot;' />
+              <groupfilter from='&quot;Montgomery St &amp; Franklin Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;N 8 St &amp; Driggs Ave&quot;' />
+              <groupfilter from='&quot;Nassau Ave &amp; Newell St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Norfolk St &amp; Broome St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;North Moore St &amp; Greenwich St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Nostrand Ave &amp; Myrtle Ave&quot;' />
+              <groupfilter from='&quot;old - E 13 St &amp; Avenue A&quot;' function='range' level='[none:start station name:nk]' to='&quot;Old Slip &amp; Front St&quot;' />
+              <groupfilter from='&quot;Pacific St &amp; Classon Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;Peck Slip &amp; Front St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Perry St &amp; Bleecker St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Pershing Square North&quot;' />
+              <groupfilter from='&quot;Pershing Square South&quot;' function='range' level='[none:start station name:nk]' to='&quot;Reade St &amp; Broadway&quot;' />
+              <groupfilter from='&quot;Richards St &amp; Delavan St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Riverside Dr &amp; W 72 St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Riverside Dr &amp; W 78 St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;Riverside Dr &amp; W 82 St&quot;' />
+              <groupfilter from='&quot;Riverside Dr &amp; W 91 St&quot;' function='range' level='[none:start station name:nk]' to='&quot;S 4 St &amp; Wythe Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;S 5 Pl &amp; S 5 St&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;S Portland Ave &amp; Hanson Pl&quot;' />
+              <groupfilter from='&quot;Sands St &amp; Navy St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Scholes St &amp; Manhattan Ave&quot;' />
+              <groupfilter from='&quot;Sigourney St &amp; Columbia St&quot;' function='range' level='[none:start station name:nk]' to='&quot;South St &amp; Whitehall St&quot;' />
+              <groupfilter from='&quot;St James Pl &amp; Oliver St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Stanton St &amp; Mangin St&quot;' />
+              <groupfilter from='&quot;State St &amp; Smith St&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 13 St &amp; Hudson St&quot;' />
+              <groupfilter from='&quot;W 15 St &amp; 10 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 16 St &amp; The High Line&quot;' />
+              <groupfilter from='&quot;W 17 St &amp; 9 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 27 St &amp; 7 Ave&quot;' />
+              <groupfilter from='&quot;W 31 St &amp; 7 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 37 St &amp; 5 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;W 38 St &amp; 8 Ave&quot;' />
+              <groupfilter from='&quot;W 4 St &amp; 7 Ave S&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 45 St &amp; 6 Ave&quot;' />
+              <groupfilter from='&quot;W 45 St &amp; 6 Ave (OLD)&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 47 St &amp; 10 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;W 49 St &amp; 8 Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;W 50 St &amp; 9 Ave&quot;' />
+              <groupfilter from='&quot;W 52 St &amp; 11 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 56 St &amp; 10 Ave&quot;' />
+              <groupfilter from='&quot;W 59 St &amp; 10 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 84 St &amp; Columbus Ave&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;W 87 St &amp; Amsterdam Ave&quot;' />
+              <groupfilter from='&quot;W 88 St &amp; West End Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;W 95 St &amp; Broadway&quot;' />
+              <groupfilter function='member' level='[none:start station name:nk]' member='&quot;W Broadway &amp; Spring Street&quot;' />
+              <groupfilter from='&quot;Warren St &amp; Church St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Washington Pl &amp; Broadway&quot;' />
+              <groupfilter from='&quot;Washington St &amp; Gansevoort St&quot;' function='range' level='[none:start station name:nk]' to='&quot;Wolcott St &amp; Dwight St&quot;' />
+              <groupfilter from='&quot;Wyckoff St &amp; 3 Ave&quot;' function='range' level='[none:start station name:nk]' to='&quot;York St &amp; Jay St&quot;' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <rows>
+            <shelf-sort direction='DESC' measure-to-sort-by='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]'>
+              <dimensions-to-sort>
+                <dimension>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</dimension>
+              </dimensions-to-sort>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' member-value='2018' />
+              </sort-filter-info>
+            </shelf-sort>
+          </rows>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Growth'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Total Annual Rides (2018: Jan-Nov)&#10;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[sum:Number of Records:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:Number of Records:qk]' scope='rows' value='Number of Rides' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:Number of Records:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Growth2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Annual Ride Growth (YoY %)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcdf:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' ordering-field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[starttime]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcdf:sum:Number of Records:qk]' scope='rows' value='% Growth in Ride Year on Year' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcdf:sum:Number of Records:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Growth3'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Adjusted Annual Ride Growth &#10;</run>
+            <run fontsize='12'>(YoY %, all years Jan-Nov)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+              <calculation class='tableau' formula='1' />
+            </column>
+            <column-instance column='[starttime]' derivation='Month' name='[mn:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Number of Records]' derivation='Sum' name='[pcdf:sum:Number of Records:qk]' pivot='key' type='quantitative'>
+              <table-calc diff-options='Relative' level-address='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' ordering-field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[starttime]' ordering-type='Field' type='PctDiff'>
+                <address>
+                  <value>-1</value>
+                </address>
+              </table-calc>
+            </column-instance>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]'>
+            <groupfilter from='1' function='range' level='[mn:starttime:ok]' to='11' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcdf:sum:Number of Records:qk]' scope='rows' value='% Growth in Rides (Year on Year, Jan-Nov)' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='show-null-value-warning' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcdf:sum:Number of Records:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='RiderGender'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Rides by Gender</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='GenderName' datatype='string' name='[Calculation_352406673415184385]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 1 THEN &quot;Male&quot;&#10;ELSEIF  [gender] = 2 THEN &quot;Female&quot;&#10;ELSE &quot;Not-Specified&quot;&#10;END' />
+            </column>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_352406673415184385]' derivation='None' name='[none:Calculation_352406673415184385:nk]' pivot='key' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673415184385:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='RiderGender%'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='GenderName' datatype='string' name='[Calculation_352406673415184385]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [gender] = 1 THEN &quot;Male&quot;&#10;ELSEIF  [gender] = 2 THEN &quot;Female&quot;&#10;ELSE &quot;Not-Specified&quot;&#10;END' />
+            </column>
+            <column datatype='integer' name='[gender]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_352406673415184385]' derivation='None' name='[none:Calculation_352406673415184385:nk]' pivot='key' type='nominal' />
+            <column-instance column='[starttime]' derivation='Count' name='[pcto:cnt:starttime:qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673415184385:nk]' ordering-type='Field' type='PctTotal' />
+            </column-instance>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673415184385:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcto:cnt:starttime:qk:4]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 21'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 22'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[start station name (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[start station name]' new-bin='true' />
+            </column>
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[start station name (group)]' direction='DESC' using='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[start station name (group)]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 23'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column datatype='string' name='[bikeid (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[bikeid]' new-bin='true' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Min' name='[min:starttime:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <natural-sort column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]' direction='ASC' />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[min:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 24'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bikes Placed Into Service by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='bikesFirstRide' datatype='datetime' name='[Calculation_352406674183528457]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{FIXED [bikeid] : MIN([starttime])}' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_352406674183528457]' derivation='None' name='[none:Calculation_352406674183528457:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[bikeid]' derivation='None' name='[none:bikeid:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406674183528457:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:bikeid:ok]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 24 (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bikes Placed Into Service by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column caption='bikesLastRide' datatype='datetime' name='[bikesFirstRide (copy)]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{FIXED [bikeid] : Max([starttime])}' />
+            </column>
+            <column-instance column='[bikesFirstRide (copy)]' derivation='Count' name='[cnt:bikesFirstRide (copy):qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:bikesFirstRide (copy):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 24 (3)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Bikes Placed Into Service by Year</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='bikesFirstRide' datatype='datetime' name='[Calculation_352406674183528457]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{FIXED [bikeid] : MIN([starttime])}' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_352406674183528457]' derivation='Count' name='[cnt:Calculation_352406674183528457:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_352406674183528457]' derivation='Year' name='[yr:Calculation_352406674183528457:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:Calculation_352406674183528457:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:Calculation_352406674183528457:ok]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 25'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 27'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Average Service Duration (Years)&#10;by Year Retired from Service</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column caption='bikesFirstRide' datatype='datetime' name='[Calculation_352406674183528457]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{FIXED [bikeid] : MIN([starttime])}' />
+            </column>
+            <column caption='Service Duration' datatype='real' name='[Calculation_352406674188976138]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='([bikesFirstRide (copy)]-[Calculation_352406674183528457])/365' />
+            </column>
+            <column-instance column='[Calculation_352406674188976138]' derivation='Avg' name='[avg:Calculation_352406674188976138:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column caption='bikesLastRide' datatype='datetime' name='[bikesFirstRide (copy)]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='{FIXED [bikeid] : Max([starttime])}' />
+            </column>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[bikesFirstRide (copy)]' derivation='Year' name='[yr:bikesFirstRide (copy):ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:bikesFirstRide (copy):ok]'>
+            <groupfilter function='level-members' level='[yr:bikesFirstRide (copy):ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:bikesFirstRide (copy):ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[avg:Calculation_352406674188976138:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:bikesFirstRide (copy):ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='Sheet 28'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='false' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</rows>
+        <cols />
+      </table>
+    </worksheet>
+    <worksheet name='Top10EndsMap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 End Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[stoptime]' derivation='Count' name='[cnt:stoptime:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[end station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[end station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column-instance column='[end station latitude]' derivation='None' name='[none:end station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station longitude]' derivation='None' name='[none:end station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+            <column-instance column='[stoptime]' derivation='Year' name='[yr:stoptime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' included-values='in-range'>
+            <min>78713</min>
+            <max>141684</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]'>
+            <groupfilter function='member' level='[yr:stoptime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]' field-type='quantitative' max='-8227486.1211756011' min='-8240528.1891267588' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]' field-type='quantitative' max='4977998.7984036626' min='4969743.5993488645' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' field-type='quantitative' max-size='1' min-size='0.618624' type='quantsize' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='true' />
+            <format attr='enabled' id='ziplabels' value='true' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' />
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.3901689052581787' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-color' value='#a0cbe8' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</cols>
+        <mark-labels>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>515653</value>
+                <value>40.741739690000003</value>
+                <value>-73.994155559999996</value>
+                <value>&quot;W 21 St &amp; 6 Ave&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>445631</value>
+                <value>40.740343199999998</value>
+                <value>-73.989551090000006</value>
+                <value>&quot;Broadway &amp; E 22 St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>561536</value>
+                <value>40.737049839999997</value>
+                <value>-73.990092959999998</value>
+                <value>&quot;E 17 St &amp; Broadway&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>503711</value>
+                <value>40.71754834</value>
+                <value>-74.013220689999997</value>
+                <value>&quot;West St &amp; Chambers St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='Top10StartsMap'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 Start Stations</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[stoptime]' derivation='Count' name='[cnt:stoptime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station latitude]' derivation='None' name='[none:start station latitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station longitude]' derivation='None' name='[none:start station longitude:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column aggregation='Avg' datatype='real' name='[start station latitude]' role='measure' semantic-role='[Geographical].[Latitude]' type='quantitative' />
+            <column aggregation='Avg' datatype='real' name='[start station longitude]' role='measure' semantic-role='[Geographical].[Longitude]' type='quantitative' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column datatype='datetime' name='[stoptime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' included-values='in-range'>
+            <min>77784</min>
+            <max>142040</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]' field-type='quantitative' max='-8225815.2696458185' min='-8240386.0781626804' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]' field-type='quantitative' max='4977925.4999541678' min='4969670.3008993696' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' field-type='quantitative' max-size='1' min-size='0.602244' type='quantsize' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='true' />
+            <format attr='enabled' id='ziplabels' value='true' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2.5420947074890137' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</cols>
+        <mark-labels>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>100440</value>
+                <value>40.741739690000003</value>
+                <value>-73.994155559999996</value>
+                <value>&quot;W 21 St &amp; 6 Ave&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station latitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station longitude:qk]</field>
+                  <field>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>99905</value>
+                <value>40.740343199999998</value>
+                <value>-73.989551090000006</value>
+                <value>&quot;Broadway &amp; E 22 St&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+    <worksheet name='TopEnds'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 End Stations in 2018</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[end station name]' derivation='Count' name='[cnt:end station name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='Count' name='[cnt:start station name:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[end station name]' role='dimension' type='nominal' />
+            <column-instance column='[end station name]' derivation='None' name='[none:end station name:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' included-values='in-range'>
+            <min>78920</min>
+            <max>147657</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <rows>
+            <shelf-sort direction='DESC' measure-to-sort-by='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]'>
+              <dimensions-to-sort>
+                <dimension>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</dimension>
+              </dimensions-to-sort>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' member-value='2018' />
+              </sort-filter-info>
+            </shelf-sort>
+          </rows>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]' value='164' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='TopStarts'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Top 10 Start Stations in 2018</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[start station name]' derivation='Count' name='[cnt:start station name:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[start station name]' derivation='None' name='[none:start station name:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[start station name]' role='dimension' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' included-values='in-range-or-null'>
+            <min>78775</min>
+            <max>162716</max>
+          </filter>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]'>
+            <groupfilter function='member' level='[yr:starttime:ok]' member='2018' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <rows>
+            <shelf-sort direction='DESC' measure-to-sort-by='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]'>
+              <dimensions-to-sort>
+                <dimension>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</dimension>
+              </dimensions-to-sort>
+              <sort-filter-info>
+                <sort-filter level-name='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' member-value='2018' />
+              </sort-filter-info>
+            </shelf-sort>
+          </rows>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]</column>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]' value='204' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='UsageByHour'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Usage by Hour Started in Summer (Jun-Aug)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Month' name='[mn:starttime:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[mn:starttime:ok]' member='6' />
+              <groupfilter function='member' level='[mn:starttime:ok]' member='7' />
+              <groupfilter function='member' level='[mn:starttime:ok]' member='8' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+            <format attr='height' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]' value='38' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.7999999523162842' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[hr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='UsageByHour2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Usage by Hour Started - Winter(Dec-Feb)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[starttime]' derivation='Hour' name='[hr:starttime:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Month' name='[mn:starttime:ok]' pivot='key' type='ordinal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[mn:starttime:ok]' member='1' />
+              <groupfilter function='member' level='[mn:starttime:ok]' member='2' />
+              <groupfilter function='member' level='[mn:starttime:ok]' member='12' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]' direction='ASC'>
+            <dictionary>
+              <bucket>12</bucket>
+              <bucket>1</bucket>
+              <bucket>2</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+            <format attr='height' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]' value='38' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' field-type='quantitative' max-size='1' min-size='0.0160125' type='quantsize' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <size column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1241216659545898' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[mn:starttime:ok]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[hr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='UsageVar'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Variation in Number of Rides by Bike ID</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column datatype='string' name='[bikeid (group)]' role='dimension' type='nominal'>
+              <calculation class='categorical-bin' column='[bikeid]' new-bin='true' />
+            </column>
+            <column aggregation='Sum' datatype='integer' name='[bikeid]' role='dimension' type='ordinal' />
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]'>
+            <groupfilter function='level-members' level='[bikeid (group)]' user:ui-manual-selection='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </filter>
+          <computed-sort column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]' direction='DESC' using='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' />
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' value='641' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
+          </style-rule>
+          <style-rule element='refboxplot'>
+            <format attr='palette' id='refline0' value='bp_blue' />
+            <format attr='opacity' id='refline0' value='239' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <encodings>
+              <lod column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]' />
+            </encodings>
+            <reference-line axis-column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' boxplot-mark-exclusion='false' boxplot-whisker-type='standard' enable-instant-analytics='true' formula='average' id='refline0' label-type='automatic' probability='95' scope='per-cell' symmetric='false' value-column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.25' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='UserType'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>User Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[starttime]' derivation='Count' name='[cnt:starttime:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' scope='rows' value='Count of Rides' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='UserType2'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>User Type - Percent of Total</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='201601-citibike-tripdata' name='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ayhfxn0ymufuf17r2z7a1lp1wx8'>
+            <column-instance column='[usertype]' derivation='None' name='[none:usertype:nk]' pivot='key' type='nominal' />
+            <column-instance column='[starttime]' derivation='Count' name='[pcto:cnt:starttime:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' type='PctTotal' />
+            </column-instance>
+            <column datatype='datetime' name='[starttime]' role='dimension' type='ordinal' />
+            <column aggregation='CountD' datatype='string' name='[usertype]' role='dimension' type='nominal' />
+            <column-instance column='[starttime]' derivation='Year' name='[yr:starttime:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]'>
+            <groupfilter function='union' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Customer&quot;' />
+              <groupfilter function='member' level='[none:usertype:nk]' member='&quot;Subscriber&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcto:cnt:starttime:qk:2]' scope='rows' value='% of Total Rides' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[pcto:cnt:starttime:qk:2]</rows>
+        <cols>[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <style />
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='10' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='98000' id='5' param='horz' type='layout-flow' w='98400' x='800' y='1000'>
+              <zone h='98000' id='3' type='layout-basic' w='44500' x='800' y='1000'>
+                <zone h='98000' id='1' name='Growth' w='44500' x='800' y='1000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='539' h='98000' id='4' is-fixed='true' param='vert' type='layout-flow' w='53900' x='45300' y='1000'>
+                <zone h='47562' id='7' name='Growth2' w='53900' x='45300' y='1000'>
+                  <layout-cache cell-count-w='6' minheight='164' non-cell-size-w='64' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='50437' id='8' name='Growth3' w='53900' x='45300' y='48562'>
+                  <layout-cache cell-count-w='6' minheight='187' non-cell-size-w='64' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+    <dashboard name='Story 1' type='storyboard'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Growth Has Slowed</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='story-description'>
+          <format attr='font-size' value='18' />
+        </style-rule>
+        <style-rule element='story-point-caption'>
+          <format attr='width' value='962' />
+          <format attr='font-size' value='14' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <zones>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='97956' id='1' param='vert' removable='false' type='layout-flow' w='98516' x='742' y='1022'>
+            <zone h='4215' id='3' type='title' w='98516' x='742' y='1022' />
+            <zone fixed-size='136' h='17369' id='4' is-fixed='true' paired-zone-id='5' removable='false' type='flipboard-nav' w='98516' x='742' y='5237' />
+            <zone h='76372' id='5' paired-zone-id='4' removable='false' type='flipboard' w='98516' x='742' y='22606'>
+              <flipboard active-id='1' nav-type='caption' show-nav-arrows='true'>
+                <story-points>
+                  <story-point caption='Growth in Citibike ridership has continued to grow year on year, but the rate of growth has slowed in 2017 and 2018. The reduciton is exaggerated in the main chart because 2018 data does not include December yet. The adjusted chart, showing only raders through Novemeber for each year corrects the exaggeration but the growth rate is still below previous years.' captured-sheet='Dashboard 1' id='1' />
+                </story-points>
+              </flipboard>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows source-height='51'>
+    <window class='worksheet' name='Growth'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4D782449-D7DB-4FAD-9C7E-C46639436BF4}' />
+    </window>
+    <window class='worksheet' name='Growth2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='149'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='173'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BBE05AB2-4BAD-4CD5-8BE4-F6E329928A51}' />
+    </window>
+    <window class='worksheet' name='Growth3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='152'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='155'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AD284114-8A7E-4E25-A80B-3CBFCDC0521C}' />
+    </window>
+    <window class='worksheet' name='UserType'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{26EDE63C-564F-4DB7-890A-BA8B4F941BEB}' />
+    </window>
+    <window class='worksheet' name='UserType2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:usertype:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{94CB9994-B112-4D64-81CA-499FE7CD5AAF}' />
+    </window>
+    <window class='worksheet' name='UsageByHour'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{257A2075-49AF-40D9-97BB-F46C87D9CD7A}' />
+    </window>
+    <window class='worksheet' name='UsageByHour2'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F416AA91-1546-47AD-86C8-035E417FD0F7}' />
+    </window>
+    <window class='worksheet' name='TopStarts'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{69E18FEE-ACAB-4865-8BEC-425DBAAF8C2D}' />
+    </window>
+    <window class='worksheet' name='TopEnds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7E1C55D7-7DDB-4EB1-ADA7-CF3DABC6FF6E}' />
+    </window>
+    <window class='worksheet' name='BottomStarts'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:start station name:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FBA6CA25-59AD-4DEF-8AD6-C34FBA132650}' />
+    </window>
+    <window class='worksheet' name='BottomEnds'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:end station name:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FF8DA85C-5D1F-41DA-9D26-3034EF75C14D}' />
+    </window>
+    <window class='worksheet' name='RiderGender'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673415184385:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CE25AC22-90DA-449E-AA4B-9F8DA3128B8B}' />
+    </window>
+    <window class='worksheet' name='RiderGender%'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:Calculation_352406673415184385:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0668B93A-C121-4890-AFC4-F5B29EF11AA5}' />
+    </window>
+    <window class='worksheet' name='Age/Duration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{80326D53-6B6C-4311-B9C3-A9A272AE0E47}' />
+    </window>
+    <window class='worksheet' name='UsageVar'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='300'>
+            <card mode='typeinlist' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[bikeid (group)]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{9C73ECA0-2C6A-43FD-86DB-25930D9DC3CC}' />
+    </window>
+    <window class='worksheet' name='Top10StartsMap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{4D5E2527-96DE-48A1-AAE2-0F3E78B616B3}' />
+    </window>
+    <window class='worksheet' name='Top10EndsMap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{66A64A33-4004-4C67-ADA7-C9C56973A692}' />
+    </window>
+    <window class='worksheet' name='Bottom10StartsMap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:start station name:nk]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:starttime:ok]' type='filter' />
+            <card pane-specification-id='2' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:starttime:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{52C1B15C-4075-4B10-9BEB-BF7610A7C6C4}' />
+    </window>
+    <window class='worksheet' name='Bottom10EndsMap'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[none:end station name:nk]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:stoptime:ok]' type='filter' />
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[cnt:stoptime:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{3AC943DF-5A04-4153-96FF-CEA5F2B4D29C}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Growth'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Growth2'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Growth3'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{3F343BA7-2ED2-4476-8D49-70F10654A32C}' />
+    </window>
+    <window class='dashboard' name='Story 1'>
+      <viewpoints />
+      <active id='-1' />
+      <simple-id uuid='{9BD24C16-634F-4451-B69F-93B0188D19BB}' />
+    </window>
+    <window class='worksheet' name='Sheet 21'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{DD0C38F6-71AC-4906-A021-F8D8573F18D1}' />
+    </window>
+    <window class='worksheet' name='Sheet 22'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{864C738F-E6E9-4B40-9FC1-01675BA1B1CE}' />
+    </window>
+    <window class='worksheet' name='Sheet 23'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6A002046-232E-400F-B7E8-0DBB26D4E6BA}' />
+    </window>
+    <window class='worksheet' name='Sheet 24'>
+      <cards>
+        <edge name='left'>
+          <strip size='204'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{957E5A58-8A8C-4402-92D8-719FF9E36C02}' />
+    </window>
+    <window class='worksheet' name='Sheet 24 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='204'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{633CFB9F-171A-4AFF-8BDA-C8BE9383CFBB}' />
+    </window>
+    <window class='worksheet' name='Sheet 24 (3)'>
+      <cards>
+        <edge name='left'>
+          <strip size='204'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{466CE9F9-BE77-499A-AA6F-605EF0547E7F}' />
+    </window>
+    <window class='worksheet' name='Sheet 25'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{09630FD1-60DE-437F-9467-C89B2E7175A4}' />
+    </window>
+    <window class='worksheet' name='Sheet 27'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[yr:bikesFirstRide (copy):ok]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A0E11B8E-7C23-4BA9-9B91-FBD5D437A0EF}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 28'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1ayhfxn0ymufuf17r2z7a1lp1wx8].[sum:stationFirstRide (copy):ok]' type='shape' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B2016F9F-D438-403E-B0F4-0C6EDEDCA26D}' />
+    </window>
+  </windows>
+</workbook>
